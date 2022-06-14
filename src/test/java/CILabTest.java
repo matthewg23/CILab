@@ -20,13 +20,32 @@ public class CILabTest {
 
     @Test
     public void detectCapitalUseTest1() {
-        myString.setString("FlaG");
+        myString.setString("InCorrecT");
         assertFalse(myString.detectCapitalUse());
-
     }
+
     @Test
     public void detectCapitalUseTest2() {
-        fail("Not yet implemented");
+        myString.setString("iNCORRECT");
+        assertFalse(myString.detectCapitalUse());
+    }
+
+    @Test
+    public void detectCapitalUseTest3() {
+        myString.setString("lowercase");
+        assertTrue(myString.detectCapitalUse());
+    }
+
+    @Test
+    public void detectCapitalUseTest4() {
+        myString.setString("Binarycode");
+        assertTrue(myString.detectCapitalUse());
+    }
+
+    @Test
+    public void detectCapitalUseTest5() {
+        myString.setString("ALLCAPITALS");
+        assertTrue(myString.detectCapitalUse());
     }
 
 
